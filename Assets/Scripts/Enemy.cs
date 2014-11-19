@@ -43,15 +43,22 @@ public class Enemy : MonoBehaviour
 	// 衝突処理
 	void OnTriggerEnter2D (Collider2D collider)
 	{
-		// プレイヤーの弾に当たったら死亡
+		// 自機の弾としか衝突処理しない
 		string layerName = LayerMask.LayerToName (collider.gameObject.layer);
 		if (layerName != "Bullet(Player)") 
 		{
 			return;
 		}
 
+		// 弾衝突処理
+		Bullet bullet = collider.transform.GetComponent<Bullet> ();
+		this.hp -= bullet.power;
 		Destroy (collider.gameObject);
-		this.spaceship.Explosion ();
-		Destroy (this.gameObject);
+
+		if (this.hp <= 0) {
+			// 死亡処理
+			this.spaceship.Explosion ();
+			Destroy (this.gameObject);
+		}
 	}
 }

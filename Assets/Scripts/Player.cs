@@ -7,19 +7,16 @@ public class Player : MonoBehaviour
 	// Spaceshipコンポーネント
 	Spaceship spaceship;
 
-	// call Start method as coroutine
 	IEnumerator Start ()
 	{
 		this.spaceship = GetComponent<Spaceship> ();
 
 		while (true) {	
-			// shot bullet same position and rotation to player
+			// 射撃処理
 			this.spaceship.Shot (transform);
 
-			// play shoot sound
 			audio.Play ();
 
-			// sleep 0.05 sec
 			yield return new WaitForSeconds (0.05f);
 		}
 	}

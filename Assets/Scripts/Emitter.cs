@@ -8,7 +8,7 @@ public class Emitter : MonoBehaviour
 
 	private int currentWave;
 
-	private Manager manager;
+	public Manager manager;
 
 	IEnumerator Start () 
 	{
@@ -16,9 +16,6 @@ public class Emitter : MonoBehaviour
 		{
 			yield break;
 		}
-
-		// マネージャーオブジェクト取得
-		this.manager = FindObjectOfType<Manager>();
 
 		while(true) 
 		{
