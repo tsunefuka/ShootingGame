@@ -17,28 +17,31 @@ public class Emitter : MonoBehaviour
 			yield break;
 		}
 
-		// find Manager component
+		// マネージャーオブジェクト取得
 		this.manager = FindObjectOfType<Manager>();
 
 		while(true) 
 		{
-			// if not playing, wait
+			// ゲームが始まるまで何もしない
 			while (this.manager.IsPlaying() == false) 
 			{
 				yield return new WaitForEndOfFrame ();
 			}
 
-			// create Wave
+			// 敵の出現フォーメーションを生成
 			GameObject wave = (GameObject)Instantiate (this.waves [this.currentWave], this.transform.position, Quaternion.identity);
 			wave.transform.parent = this.transform;
 
+			// 全員死ぬまで待機
 			while (wave.transform.childCount != 0) 
 			{
 				yield return new WaitForEndOfFrame ();
 			}
 
+			// 敵が全員死んだらフォーメーションも削除
 			Destroy (wave);
 
+			// ひと通りのフォーメーションが終わったら最初に戻る
 			if (this.waves.Length <= ++this.currentWave) 
 			{
 				this.currentWave = 0;

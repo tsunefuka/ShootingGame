@@ -1,22 +1,21 @@
 ﻿using UnityEngine;
 
-// to require Rigitbody2D component
 [RequireComponent(typeof(Rigidbody2D))]
 public class Spaceship : MonoBehaviour 
 {
-	// movement speed
+	// 移動速度
 	public float speed;
 
-	// interval shoot bullet
+	// 射撃間隔
 	public float shotDelay;
 
-	// prefav of bullet
+	// 弾のプレハブ
 	public GameObject bullet;
 
-	// flag to shot bullet
+	// 射撃を行うか
 	public bool canShot;
 
-	// GameObject of explosion
+	// 爆発のプレハブ
 	public GameObject explosion;
 
 	public void Explosion()

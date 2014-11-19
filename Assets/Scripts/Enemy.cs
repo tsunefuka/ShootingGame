@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// 敵を表現するモデル
 public class Enemy : MonoBehaviour 
 {
 	// ヒットポイント
@@ -39,10 +40,11 @@ public class Enemy : MonoBehaviour
 		this.rigidbody2D.velocity = direction * this.spaceship.speed;
 	}
 
+	// 衝突処理
 	void OnTriggerEnter2D (Collider2D collider)
 	{
+		// プレイヤーの弾に当たったら死亡
 		string layerName = LayerMask.LayerToName (collider.gameObject.layer);
-
 		if (layerName != "Bullet(Player)") 
 		{
 			return;

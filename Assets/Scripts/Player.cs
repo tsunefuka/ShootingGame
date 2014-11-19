@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// プレイヤーの自機を表現するモデル
 public class Player : MonoBehaviour 
 {
 	// Spaceshipコンポーネント
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
 
 	void Update () 
 	{
+		// プレイヤーの入力処理
 	    float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
 
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
 
 	void Move (Vector2 direction)
 	{
+		// 自機の移動処理
+		// 画面端の向こうには行けなくする
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
 		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1, 1));
 		
@@ -46,16 +50,17 @@ public class Player : MonoBehaviour
 		this.transform.position = pos;
 	}
 
-	// called hitted to collider
+	// 衝突処理
 	void OnTriggerEnter2D (Collider2D collider)
 	{
-		// get Layer name
 		string layerName = LayerMask.LayerToName(collider.gameObject.layer);
 
+		// 敵の弾に当たったら敵の弾を削除
 		if (layerName == "Bullet(Enemy)") {
 			Destroy (collider.gameObject);
 		}
 
+		// 敵の弾か敵機い当たったら自分を削除
 		if (layerName == "Bullet(Enemy)" || layerName == "Enemy") {
 			// find Manager component, and call GameOver
 			FindObjectOfType<Manager>().GameOver();

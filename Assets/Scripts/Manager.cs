@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// ゲームを管理するクラス
 public class Manager : MonoBehaviour 
 {
 	public GameObject player;
