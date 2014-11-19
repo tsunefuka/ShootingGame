@@ -7,7 +7,7 @@ public class Manager : MonoBehaviour
 
 	private GameObject title;
 
-	void Start () 
+	void Awake () 
 	{
 		title = GameObject.Find ("Title");
 	}

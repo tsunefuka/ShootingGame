@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 100016, guid: 83deb9109c6604c018837b27942dd380, type: 2}
+  - {fileID: 100016, guid: f0da81ec43cb24fd1b1aa21de95cb767, type: 2}
 --- !u!4 &543403278
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &612703877
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &994567528
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!114 &1845223161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,4 +785,4 @@ Transform:
   - {fileID: 1231764605}
   - {fileID: 994567530}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6

@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// 敵の出現フォーメーションを管理するクラス
 public class Emitter : MonoBehaviour 
 {
-	// strage Wave prefab
 	public GameObject[] waves;
 
-	// now Wave
 	private int currentWave;
 
 	private Manager manager;
