@@ -21,12 +21,12 @@ public class Spaceship : MonoBehaviour
 
 	public void Explosion()
 	{
-		Instantiate (explosion, transform.position, transform.rotation);
+		Instantiate (this.explosion, this.transform.position, this.transform.rotation);
 	}
 
 	// create bullet
 	public void Shot (Transform origin)
 	{
-		Instantiate (bullet, origin.position, origin.rotation);
+		Instantiate (this.bullet, origin.position, origin.rotation);
 	}
 }

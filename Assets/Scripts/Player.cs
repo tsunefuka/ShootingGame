@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
 	// call Start method as coroutine
 	IEnumerator Start ()
 	{
-		spaceship = GetComponent<Spaceship> ();
+		this.spaceship = GetComponent<Spaceship> ();
 
 		while (true) {	
 			// shot bullet same position and rotation to player
-			spaceship.Shot (transform);
+			this.spaceship.Shot (transform);
 
 			// play shoot sound
 			audio.Play ();
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 		float y = Input.GetAxisRaw ("Vertical");
 
 		Vector2 direction = new Vector2 (x, y).normalized;
-		Move (direction);
+		this.Move (direction);
 	}
 
 	void Move (Vector2 direction)
@@ -37,13 +37,13 @@ public class Player : MonoBehaviour
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
 		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1, 1));
 		
-		Vector2 pos = transform.position;
-		pos += direction * spaceship.speed * Time.deltaTime;
+		Vector2 pos = this.transform.position;
+		pos += direction * this.spaceship.speed * Time.deltaTime;
 
 		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
 		pos.y = Mathf.Clamp (pos.y, min.y, max.y);
 		
-		transform.position = pos;
+		this.transform.position = pos;
 	}
 
 	// called hitted to collider
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 		// get Layer name
 		string layerName = LayerMask.LayerToName(collider.gameObject.layer);
 
-		if ( layerName == "Bullet(Enemy)") {
+		if (layerName == "Bullet(Enemy)") {
 			Destroy (collider.gameObject);
 		}
 
@@ -60,8 +60,8 @@ public class Player : MonoBehaviour
 			// find Manager component, and call GameOver
 			FindObjectOfType<Manager>().GameOver();
 
-			spaceship.Explosion();
-			Destroy (gameObject);
+			this.spaceship.Explosion();
+			Destroy (this.gameObject);
 		}
 	}
 }

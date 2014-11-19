@@ -12,32 +12,36 @@ public class Emitter : MonoBehaviour
 
 	IEnumerator Start () 
 	{
-		if (waves.Length == 0) {
+		if (this.waves.Length == 0) 
+		{
 			yield break;
 		}
 
 		// find Manager component
-		manager = FindObjectOfType<Manager>();
+		this.manager = FindObjectOfType<Manager>();
 
-		while(true) {
-
+		while(true) 
+		{
 			// if not playing, wait
-			while (manager.IsPlaying() == false) {
+			while (this.manager.IsPlaying() == false) 
+			{
 				yield return new WaitForEndOfFrame ();
 			}
 
 			// create Wave
-			GameObject wave = (GameObject)Instantiate (waves [currentWave], transform.position, Quaternion.identity);
-			wave.transform.parent = transform;
+			GameObject wave = (GameObject)Instantiate (this.waves [this.currentWave], this.transform.position, Quaternion.identity);
+			wave.transform.parent = this.transform;
 
-			while (wave.transform.childCount != 0) {
+			while (wave.transform.childCount != 0) 
+			{
 				yield return new WaitForEndOfFrame ();
 			}
 
 			Destroy (wave);
 
-			if (waves.Length <= ++currentWave) {
-				currentWave = 0;
+			if (this.waves.Length <= ++this.currentWave) 
+			{
+				this.currentWave = 0;
 			}
 		}
 	}

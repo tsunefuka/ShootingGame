@@ -9,7 +9,7 @@ public class Background : MonoBehaviour
 	void Update () 
 	{
 		// create offset 
-		float y = Mathf.Repeat (Time.time * speed, 1);
+		float y = Mathf.Repeat (Time.time * this.speed, 1);
 		Vector2 offset = new Vector2 (0, y);
 
 		// set offset to material

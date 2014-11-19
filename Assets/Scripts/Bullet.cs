@@ -12,9 +12,10 @@ public class Bullet : MonoBehaviour
 	// 攻撃力
 	public int power = 1;
 
-	void Start () {
-		rigidbody2D.velocity = transform.up.normalized * speed;
+	void Start () 
+	{
+		this.rigidbody2D.velocity = this.transform.up.normalized * this.speed;
 
-		Destroy (gameObject, lifeTime);
+		Destroy (this.gameObject, this.lifeTime);
 	}
 }

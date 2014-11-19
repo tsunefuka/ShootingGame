@@ -9,33 +9,33 @@ public class Manager : MonoBehaviour
 
 	void Awake () 
 	{
-		title = GameObject.Find ("Title");
+		this.title = GameObject.Find ("Title");
 	}
 	
 	void Update () 
 	{
-		if (IsPlaying () == false && Input.GetKeyDown (KeyCode.X))
+		if (this.IsPlaying () == false && Input.GetKeyDown (KeyCode.X))
 		{
-			GameStart ();
+			this.GameStart ();
 		}
 	}
 
 	void GameStart ()
 	{
 		// create player by active diactive when game started
-		title.SetActive (false);
-		Instantiate (player, player.transform.position, player.transform.rotation);
+		this.title.SetActive (false);
+		Instantiate (this.player, this.player.transform.position, this.player.transform.rotation);
 	}
 
 	public void GameOver ()
 	{
 		// display title if game over
-		title.SetActive (true);
+		this.title.SetActive (true);
 	}
 
 	public bool IsPlaying ()
 	{
 		// judge IsPlaying by title is active/nonactive
-		return title.activeSelf == false;
+		return this.title.activeSelf == false;
 	}
 }

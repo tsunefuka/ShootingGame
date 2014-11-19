@@ -4,6 +4,6 @@ public class Explosion : MonoBehaviour
 {
 	void OnAnimationFinish ()
 	{
-		Destroy (gameObject);
+		Destroy (this.gameObject);
 	}
 }
