@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
 	// ヒットポイント
 	public int hp = 1;
 
+	// 撃破時の獲得ポイント
+	public int point = 100;
+
 	// Spaceshipコンポーネント
 	Spaceship spaceship;
 
@@ -55,13 +58,15 @@ public class Enemy : MonoBehaviour
 		this.hp -= bullet.power;
 		Destroy (collider.gameObject);
 
-		if (this.hp <= 0) {
+		if (this.hp <= 0) 
+		{
 			// 死亡処理
+			FindObjectOfType<Score> ().AddPoint (point);
 			this.spaceship.Explosion ();
 			Destroy (this.gameObject);
 		}
-                else
-                {
+		else
+		{
 			this.spaceship.GetAnimator ().SetTrigger ("Damage");
 		}
 	}

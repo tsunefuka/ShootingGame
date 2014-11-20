@@ -15,11 +15,15 @@ public class Score : MonoBehaviour
 	// PlayerPrefsで保存するためのキー
 	private string highScoreKey = "highScore";
 
-	void Start () {
+	void Start ()
+	{
 		this.Initialize ();
 	}
 	
-	void Update () {
+	void Update ()
+	{
+		this.highScore = Mathf.Max (this.highScore, this.score);
+
 		this.scoreGUIText.text = this.score.ToString ();
 		this.highScoreGUIText.text = "HighScore : " + this.highScore.ToString ();
 	}
@@ -38,9 +42,9 @@ public class Score : MonoBehaviour
 	public void Save ()
 	{
 		// ハイスコアをPlayerPrefsに保存
-		PlayerPrefs.SetInt (this.highScoreKey, highScore);
+		PlayerPrefs.SetInt (this.highScoreKey, this.highScore);
 		PlayerPrefs.Save ();
 
-		Initialize ();
+		this.Initialize ();
 	}
 }

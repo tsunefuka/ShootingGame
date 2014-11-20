@@ -30,6 +30,9 @@ public class Manager : MonoBehaviour
 
 	public void GameOver ()
 	{
+		// ハイスコアの保存＋獲得スコアのリセット
+		FindObjectOfType<Score> ().Save ();
+
 		// display title if game over
 		this.title.SetActive (true);
 	}
