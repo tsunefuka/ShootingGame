@@ -18,6 +18,14 @@ public class Spaceship : MonoBehaviour
 	// 爆発のプレハブ
 	public GameObject explosion;
 
+	// アニメーターコンポーネント
+	private Animator animator;
+
+	void Start ()
+	{
+		this.animator = GetComponent<Animator> ();
+	}
+
 	public void Explosion()
 	{
 		Instantiate (this.explosion, this.transform.position, this.transform.rotation);
@@ -27,5 +35,10 @@ public class Spaceship : MonoBehaviour
 	public void Shot (Transform origin)
 	{
 		Instantiate (this.bullet, origin.position, origin.rotation);
+	}
+
+	public Animator GetAnimator ()
+	{
+		return animator;
 	}
 }

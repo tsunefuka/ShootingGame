@@ -2,7 +2,7 @@
 using System.Collections;
 
 // 敵を表現するモデル
-public class Enemy : MonoBehaviour 
+public class Enemy : MonoBehaviour
 {
 	// ヒットポイント
 	public int hp = 1;
@@ -10,24 +10,24 @@ public class Enemy : MonoBehaviour
 	// Spaceshipコンポーネント
 	Spaceship spaceship;
 
-	IEnumerator Start () 
+	IEnumerator Start ()
 	{
 		// 移動処理
 		this.spaceship = GetComponent<Spaceship> ();
 		Move (this.transform.up * -1);
 
 		// if canShot is false, finish corutine here
-		if (this.spaceship.canShot == false) 
+		if (this.spaceship.canShot == false)
 		{
 			yield break;
 		}
 
-		while (true) 
+		while (true)
 		{
 			// 射撃処理
-			for (int i = 0; i < transform.childCount; i++) 
+			for (int i = 0; i < transform.childCount; i++)
 			{
-				Transform shotPosition = transform.GetChild(i);
+				Transform shotPosition = transform.GetChild (i);
 				this.spaceship.Shot (shotPosition);
 			}
 
@@ -59,6 +59,10 @@ public class Enemy : MonoBehaviour
 			// 死亡処理
 			this.spaceship.Explosion ();
 			Destroy (this.gameObject);
+		}
+                else
+                {
+			this.spaceship.GetAnimator ().SetTrigger ("Damage");
 		}
 	}
 }
