@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Score.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
     <Files>
-      <File FileName="../../../workspace/soccer-unity3d/soccer-unity3d/Assets/Scripts/Title/Controller.cs" Line="33" Column="33" />
-      <File FileName="Assets/Scripts/Score.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Spaceship.cs" Line="32" Column="32" />
+      <File FileName="Assets/Scripts/Manager.cs" Line="42" Column="42" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="2" Column="2" NotebookId="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="39" Column="39" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

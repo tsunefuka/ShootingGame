@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Spaceship : MonoBehaviour 
+public abstract class Spaceship : MonoBehaviour 
 {
 	// 移動速度
 	public float speed;
@@ -21,7 +21,7 @@ public class Spaceship : MonoBehaviour
 	// アニメーターコンポーネント
 	private Animator animator;
 
-	void Start ()
+	protected void Initialize ()
 	{
 		this.animator = GetComponent<Animator> ();
 	}
@@ -31,7 +31,6 @@ public class Spaceship : MonoBehaviour
 		Instantiate (this.explosion, this.transform.position, this.transform.rotation);
 	}
 
-	// create bullet
 	public void Shot (Transform origin)
 	{
 		Instantiate (this.bullet, origin.position, origin.rotation);
@@ -39,6 +38,8 @@ public class Spaceship : MonoBehaviour
 
 	public Animator GetAnimator ()
 	{
-		return animator;
+		return this.animator;
 	}
+
+	protected abstract void Move (Vector2 direction);
 }

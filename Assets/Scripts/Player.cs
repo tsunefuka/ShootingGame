@@ -2,18 +2,15 @@
 using System.Collections;
 
 // プレイヤーの自機を表現するモデル
-public class Player : MonoBehaviour 
+public class Player : Spaceship 
 {
-	// Spaceshipコンポーネント
-	Spaceship spaceship;
-
 	IEnumerator Start ()
 	{
-		this.spaceship = GetComponent<Spaceship> ();
+		base.Initialize ();
 
 		while (true) {	
 			// 射撃処理
-			this.spaceship.Shot (transform);
+			this.Shot (transform);
 
 			audio.Play ();
 
@@ -31,7 +28,7 @@ public class Player : MonoBehaviour
 		this.Move (direction);
 	}
 
-	void Move (Vector2 direction)
+	protected override void Move (Vector2 direction)
 	{
 		// 自機の移動処理
 		// 画面端の向こうには行けなくする
@@ -39,7 +36,7 @@ public class Player : MonoBehaviour
 		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1, 1));
 		
 		Vector2 pos = this.transform.position;
-		pos += direction * this.spaceship.speed * Time.deltaTime;
+		pos += direction * this.speed * Time.deltaTime;
 
 		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
 		pos.y = Mathf.Clamp (pos.y, min.y, max.y);
@@ -62,7 +59,7 @@ public class Player : MonoBehaviour
 			// find Manager component, and call GameOver
 			FindObjectOfType<Manager>().GameOver();
 
-			this.spaceship.Explosion();
+			this.Explosion();
 			Destroy (this.gameObject);
 		}
 	}

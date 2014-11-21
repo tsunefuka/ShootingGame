@@ -512,6 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: .0500000007
+  shotDelay: .300000012
+  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  canShot: 1
+  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
   hp: 10
   point: 200
 --- !u!114 &11400002
@@ -541,6 +546,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: .0500000007
+  shotDelay: .300000012
+  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  canShot: 1
+  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
   hp: 10
   point: 200
 --- !u!114 &11400006
@@ -586,6 +596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: .0500000007
+  shotDelay: .300000012
+  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  canShot: 1
+  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
   hp: 10
   point: 200
 --- !u!212 &21200000

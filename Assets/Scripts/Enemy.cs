@@ -2,7 +2,7 @@
 using System.Collections;
 
 // 敵を表現するモデル
-public class Enemy : MonoBehaviour
+public class Enemy : Spaceship
 {
 	// ヒットポイント
 	public int hp = 1;
@@ -10,17 +10,15 @@ public class Enemy : MonoBehaviour
 	// 撃破時の獲得ポイント
 	public int point = 100;
 
-	// Spaceshipコンポーネント
-	Spaceship spaceship;
-
 	IEnumerator Start ()
 	{
+		base.Initialize ();
+
 		// 移動処理
-		this.spaceship = GetComponent<Spaceship> ();
-		Move (this.transform.up * -1);
+		this.Move (this.transform.up * -1);
 
 		// if canShot is false, finish corutine here
-		if (this.spaceship.canShot == false)
+		if (this.canShot == false)
 		{
 			yield break;
 		}
@@ -31,16 +29,16 @@ public class Enemy : MonoBehaviour
 			for (int i = 0; i < transform.childCount; i++)
 			{
 				Transform shotPosition = transform.GetChild (i);
-				this.spaceship.Shot (shotPosition);
+				this.Shot (shotPosition);
 			}
 
-			yield return new WaitForSeconds (spaceship.shotDelay);
+			yield return new WaitForSeconds (this.shotDelay);
 		}
 	}
 
-	public void Move (Vector2 direction)
+	protected override void Move (Vector2 direction)
 	{
-		this.rigidbody2D.velocity = direction * this.spaceship.speed;
+		this.rigidbody2D.velocity = direction * this.speed;
 	}
 
 	// 衝突処理
@@ -62,12 +60,12 @@ public class Enemy : MonoBehaviour
 		{
 			// 死亡処理
 			FindObjectOfType<Score> ().AddPoint (point);
-			this.spaceship.Explosion ();
+			this.Explosion ();
 			Destroy (this.gameObject);
 		}
 		else
 		{
-			this.spaceship.GetAnimator ().SetTrigger ("Damage");
+			this.GetAnimator ().SetTrigger ("Damage");
 		}
 	}
 }
