@@ -4120,7 +4120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4138,7 +4138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4156,7 +4156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4174,7 +4174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4210,7 +4210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4228,7 +4228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4246,7 +4246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4264,7 +4264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4282,7 +4282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4300,7 +4300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4318,7 +4318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4336,7 +4336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4354,7 +4354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4372,7 +4372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4390,7 +4390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4408,7 +4408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4426,7 +4426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4444,7 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4462,7 +4462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4498,7 +4498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4516,7 +4516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4534,7 +4534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4552,7 +4552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0
@@ -4570,7 +4570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd01db7660294daa8ef63f3cabf50fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .5
+  speed: 1
   shotDelay: .300000012
   bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
   canShot: 0

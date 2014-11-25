@@ -510,10 +510,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .5
-  shotDelay: .300000012
-  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  shotDelay: 1.5
+  bullet: {fileID: 100000, guid: a6371a6318e50417e87f948a5f0285d6, type: 2}
   canShot: 1
-  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
+  explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
 --- !u!114 &11400006
@@ -528,10 +528,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .5
-  shotDelay: .300000012
-  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  shotDelay: 1.5
+  bullet: {fileID: 100000, guid: a6371a6318e50417e87f948a5f0285d6, type: 2}
   canShot: 1
-  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
+  explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
 --- !u!114 &11400008
@@ -546,10 +546,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .5
-  shotDelay: .300000012
-  bullet: {fileID: 100000, guid: 4bfe770e1ac7a4fa4ac3294ac4a6d9db, type: 2}
+  shotDelay: 1.5
+  bullet: {fileID: 100000, guid: a6371a6318e50417e87f948a5f0285d6, type: 2}
   canShot: 1
-  explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
+  explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
 --- !u!212 &21200000
