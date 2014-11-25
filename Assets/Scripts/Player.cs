@@ -30,13 +30,21 @@ public class Player : Spaceship
 
 	protected override void Move (Vector2 direction)
 	{
+		float speed = this.speed;
+
+		// Shiftキーを押してる間はゆっくり動く
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
+		{
+			speed *= 0.1f;
+		}
+
 		// 自機の移動処理
 		// 画面端の向こうには行けなくする
 		Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
 		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1, 1));
 		
 		Vector2 pos = this.transform.position;
-		pos += direction * this.speed * Time.deltaTime;
+		pos += direction * speed * Time.deltaTime;
 
 		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
 		pos.y = Mathf.Clamp (pos.y, min.y, max.y);
@@ -54,7 +62,7 @@ public class Player : Spaceship
 			Destroy (collider.gameObject);
 		}
 
-		// 敵の弾か敵機い当たったら自分を削除
+		// 敵の弾か敵機に当たったら自分を削除
 		if (layerName == "Bullet(Enemy)" || layerName == "Enemy") {
 			// find Manager component, and call GameOver
 			FindObjectOfType<Manager>().GameOver();
