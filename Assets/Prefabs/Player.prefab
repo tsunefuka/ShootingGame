@@ -147,6 +147,10 @@ MonoBehaviour:
   bullet: {fileID: 100002, guid: ec8b4c6be14ce4a778e260a54459ff21, type: 2}
   canShot: 0
   explosion: {fileID: 100000, guid: 1354bd3f9b3174c7cbcbb10a791e8ea6, type: 2}
+  levels:
+  - {fileID: 100000, guid: 4bd1242b7723c412caf22f7c0d70515c, type: 2}
+  - {fileID: 100000, guid: 3116a31857b9b4694b69249e7b782100, type: 2}
+  - {fileID: 100000, guid: 87514fd7e473448c89eb79051eb32309, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

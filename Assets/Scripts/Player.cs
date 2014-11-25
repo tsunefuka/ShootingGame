@@ -4,6 +4,13 @@ using System.Collections;
 // プレイヤーの自機を表現するモデル
 public class Player : Spaceship 
 {
+	// 自機のレベル
+	// レベル上げても自動で強くなる訳ではないので、Inspectorから変更させない
+	private int level = 1;
+
+	// 自機のレベルごとのパラメータ
+	public GameObject[] levels;
+
 	IEnumerator Start ()
 	{
 		base.Initialize ();
@@ -69,6 +76,30 @@ public class Player : Spaceship
 
 			this.Explosion();
 			Destroy (this.gameObject);
+		}
+
+		// アイテム回収処理
+		if (layerName == "Item")
+		{
+			this.EffectItem (collider.transform.GetComponent<Item> ());
+			Destroy (collider.gameObject);
+		}
+	}
+
+	// アイテムの効果発動
+	void EffectItem (Item item)
+	{
+        // 本来はアイテムの種類によって処理を切り分ける。今はレベルアップのみ実装。
+		this.LevelUp ();
+	}
+
+	// レベルアップ処理
+	void LevelUp ()
+	{
+		if (this.level < this.levels.Length) 
+		{
+			this.level++;
+			this.bullet = this.levels [this.level-1].transform.GetComponent<PlayerLevel>().bullet;
 		}
 	}
 }

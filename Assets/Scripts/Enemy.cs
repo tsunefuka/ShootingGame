@@ -10,6 +10,9 @@ public class Enemy : Spaceship
 	// 撃破時の獲得ポイント
 	public int point = 100;
 
+	// 撃破時のドロップアイテム
+	public GameObject drop_item;
+
 	IEnumerator Start ()
 	{
 		base.Initialize ();
@@ -62,10 +65,20 @@ public class Enemy : Spaceship
 			FindObjectOfType<Score> ().AddPoint (point);
 			this.Explosion ();
 			Destroy (this.gameObject);
+			this.DropItem (collider);
 		}
 		else
 		{
 			this.GetAnimator ().SetTrigger ("Damage");
+		}
+	}
+
+	// 撃破時のドロップ
+	private void DropItem (Collider2D collider)
+	{
+		if (this.drop_item != null)
+		{
+			Instantiate (this.drop_item, this.transform.position, this.transform.rotation);
 		}
 	}
 }

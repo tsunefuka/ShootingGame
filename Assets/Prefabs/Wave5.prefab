@@ -516,6 +516,7 @@ MonoBehaviour:
   explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
+  drop_item: {fileID: 100000, guid: 95346ba9d45a948e29c12bdb9d5c6d99, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,6 +535,7 @@ MonoBehaviour:
   explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
+  drop_item: {fileID: 100000, guid: 95346ba9d45a948e29c12bdb9d5c6d99, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,6 +554,7 @@ MonoBehaviour:
   explosion: {fileID: 100000, guid: e32bf4243259543129fff19fb3f2d1e4, type: 2}
   hp: 100
   point: 2000
+  drop_item: {fileID: 100000, guid: 95346ba9d45a948e29c12bdb9d5c6d99, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
