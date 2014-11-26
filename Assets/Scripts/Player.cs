@@ -17,7 +17,7 @@ public class Player : Spaceship
 
 		while (true) {	
 			// 射撃処理
-			this.Shot (transform);
+			this.Shot ();
 
 			audio.Play ();
 
@@ -33,6 +33,18 @@ public class Player : Spaceship
 
 		Vector2 direction = new Vector2 (x, y).normalized;
 		this.Move (direction);
+	}
+
+	public void Shot ()
+	{
+		// レベルにあった射撃位置から射撃する
+		PlayerLevel level = this.getPlayerLevel ();
+		Transform shot_positions_transform = this.transform.Find (level.shot_position_name);
+		for (int i = 0; i < shot_positions_transform.childCount; i++)
+		{
+			Transform shotPosition = shot_positions_transform.GetChild(i);
+			base.Shot (shotPosition);
+		}
 	}
 
 	protected override void Move (Vector2 direction)

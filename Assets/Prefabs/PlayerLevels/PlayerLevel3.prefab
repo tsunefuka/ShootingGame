@@ -39,8 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d90f896685b41f5b0a0bf3e773c86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 100004, guid: 1bec7a4d00d834deb899a51e13314a5c, type: 2}
+  bullet: {fileID: 100002, guid: ec8b4c6be14ce4a778e260a54459ff21, type: 2}
   interval_shot: .00999999978
+  shot_position_name: Level3_ShotPositions
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
