@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100004, guid: 33d655ffc207c40dba1ef6f0b96bb6e6, type: 2}
+  interval_shot: .0500000007
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -21,7 +21,7 @@ public class Player : Spaceship
 
 			audio.Play ();
 
-			yield return new WaitForSeconds (0.05f);
+			yield return new WaitForSeconds (this.getPlayerLevel().interval_shot);
 		}
 	}
 
@@ -99,7 +99,13 @@ public class Player : Spaceship
 		if (this.level < this.levels.Length) 
 		{
 			this.level++;
-			this.bullet = this.levels [this.level-1].transform.GetComponent<PlayerLevel>().bullet;
+			this.bullet = this.getPlayerLevel ().bullet;
 		}
+	}
+
+	// 現在のレベルに対応したPlayerLevelを取得する
+	protected PlayerLevel getPlayerLevel ()
+	{
+		return this.levels [this.level-1].transform.GetComponent<PlayerLevel>();
 	}
 }
