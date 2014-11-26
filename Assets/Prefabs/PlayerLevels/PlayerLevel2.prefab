@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100002, guid: ec8b4c6be14ce4a778e260a54459ff21, type: 2}
-  interval_shot: .0500000007
+  interval_shot: .0799999982
   shot_position_name: Level2_ShotPositions
 --- !u!1001 &100100000
 Prefab:
